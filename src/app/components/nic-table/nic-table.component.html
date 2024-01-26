@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="row mt-5">
+
+        <div class="col-12 fixTableHead">
+
+            <div *ngIf="!persons" class="d-flex justify-content-center align-items-center fixed-top fixed-bottom fixed-start fixed-end">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <table class="table table-hover" *ngIf="persons">
+                <caption>Description: This table displays information about persons.</caption>
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>NIC</th>
+                        <th>Birthday</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let tempPerson of persons; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{tempPerson.nic}}</td>
+                        <td>{{tempPerson.dob}}</td>
+                        <td>{{tempPerson.age}}</td>
+                        <td>{{tempPerson.gender}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        
+    </div>
+    
+</div>

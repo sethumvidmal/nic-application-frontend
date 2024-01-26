@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row mt-5">
+        <div>
+            <h3>You can upload only 4 files :) </h3>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="d-flex justify-content-center">
+            <div class="col-4">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="formFile1" class="form-label">1:</label>
+                        <input class="form-control" type="file" id="formFile1" (change)="onFileSelected($event, 0)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile2" class="form-label">2:</label>
+                        <input class="form-control" type="file" id="formFile2" (change)="onFileSelected($event, 1)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile3" class="form-label">3:</label>
+                        <input class="form-control" type="file" id="formFile3" (change)="onFileSelected($event, 2)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile4" class="form-label">4:</label>
+                        <input class="form-control" type="file" id="formFile4" (change)="onFileSelected($event, 3)">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
