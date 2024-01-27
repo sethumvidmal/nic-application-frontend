@@ -11,6 +11,11 @@ import { RegisterComponent } from './pages/register/register.component';
 import { NicTableComponent } from './components/nic-table/nic-table.component';
 import { UploadNewCsvComponent } from './pages/upload-new-csv/upload-new-csv.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
+
 
 @NgModule({
   declarations: [
@@ -20,7 +25,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     RegisterComponent,
     NicTableComponent,
     UploadNewCsvComponent,
-    DashboardComponent
+    DashboardComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
