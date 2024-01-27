@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { NicTableComponent } from './components/nic-table/nic-table.component';
 import { UploadNewCsvComponent } from './pages/upload-new-csv/upload-new-csv.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UploadNewCsvComponent } from './pages/upload-new-csv/upload-new-csv.com
     LoginComponent,
     RegisterComponent,
     NicTableComponent,
-    UploadNewCsvComponent
+    UploadNewCsvComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
