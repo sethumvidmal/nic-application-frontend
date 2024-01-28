@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NicTableComponent } from './components/nic-table/nic-table.component';
 import { UploadNewCsvComponent } from './pages/upload-new-csv/upload-new-csv.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,24 @@ const routes: Routes = [
   {
     path: "dashboard",
     component: DashboardComponent
+  },
+  {
+    path: "register",
+    component: RegisterComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "",
+    redirectTo: "/dashboard",
+    pathMatch: "full"
+  },
+  {
+    path: "**",
+    redirectTo: "/dashboard",
+    pathMatch: "full"
   }
 ];
 

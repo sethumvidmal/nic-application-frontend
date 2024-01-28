@@ -25,7 +25,7 @@ export class PieChartComponent implements OnInit {
         this.maleCount = maleData;
 
       });
-      
+
     this.httpClient.get<number>(`http://localhost:8080/api/get-female-count`)
       .subscribe(femaleData => {
         this.femaleCount = femaleData;
